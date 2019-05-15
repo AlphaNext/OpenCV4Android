@@ -11,13 +11,17 @@
 
 ```
 $ export ANDROID_NDK_PATH=[your ndk path]
+
 # such as: export ANDROID_NDK_PATH=/home/xxx/android-ndk-r19c
+
 $ sudo apt-get install build-essential cmake pkg-config ffmpeg
 $ cd opencv-3.4.5
 $ mkdir build
 $ cd build
+
 # build for static lib and libopencv_java3.so
 # ANDROID_ABI could be changed (such as "x86" "x86_64" "armeabi" "arm64-v8a" "armeabi-v7a" "mips" "mips64")
+
 $ cmake -DCMAKE_BUILD_WITH_INSTALL_RPATH=ON \
         -DCMAKE_TOOLCHAIN_FILE="${ANDROID_NDK_ROOT}/build/cmake/android.toolchain.cmake" \
         -DANDROID_NDK="${ANDROID_NDK_ROOT}" \
